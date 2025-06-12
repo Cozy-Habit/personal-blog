@@ -8,11 +8,11 @@ const Hero = () => {
       </h1>
       <div className="w-40 rounded-xl"></div>
       <p>
-        I'm a curious Computer Science student on a quest for my Bachelor's
-        degree and the perfect cup of coffee ☕. I’m especially into frontend
-        development, web wizardry, and making the internet a more accessible
-        place for everyone—because good design should include everyone, not just
-        the lucky few.
+        I&apos;m a curious Computer Science student on a quest for my
+        Bachelor&apos;s degree and the perfect cup of coffee ☕. I&apos;m
+        especially into frontend development, web wizardry, and making the
+        internet a more accessible place for everyone—because good design should
+        include everyone, not just the lucky few.
         <br />
         <br />
         👩🏼‍💻 Working on UX, React, Typescript and Web Accessibility
