@@ -2,10 +2,11 @@
   "name": "personal-blog",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node scripts/copy-post-assets.js && next dev",
+    "build": "node scripts/copy-post-assets.js && next build",
+    "start": "node scripts/copy-post-assets.js && next start",
     "lint": "next lint"
   },
   "dependencies": {

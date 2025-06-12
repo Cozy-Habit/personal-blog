@@ -3,7 +3,6 @@ title: Figuring out how to set up ESLint and Prettier
 date: June 3, 2025
 thumbnail: https://exceptionptr.gallerycdn.vsassets.io/extensions/exceptionptr/vscode-prettier-eslint/1.1.5/1701684974736/Microsoft.VisualStudio.Services.Icons.Default
 descr: Lorem Ipsum
-draft: true
 ---
 
 # Figuring out how to set up ESLint and Prettier

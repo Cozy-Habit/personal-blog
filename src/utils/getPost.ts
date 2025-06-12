@@ -7,7 +7,16 @@ export default function getPostContent(id: string) {
   try {
     const fullPath = path.join(postsDirectory, `${id}/post.md`);
     const fileContents = fs.readFileSync(fullPath, "utf-8");
-    return fileContents;
+
+    const transformed = fileContents.replace(
+      /!\[(.*?)\]\(([^\)]+)\)/g,
+      (_match, alt, imgPath) => {
+        console.log(_match, alt, imgPath);
+        return `![${alt}](/_generated/posts/${id}/${imgPath})`;
+      }
+    );
+    console.log(id, transformed);
+    return transformed;
   } catch (e) {
     console.error(e);
   }

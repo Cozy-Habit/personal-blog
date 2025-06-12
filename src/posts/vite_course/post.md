@@ -3,7 +3,6 @@ title: I took the Vite FrontendMasters course by Steve Kinney and here are my ta
 date: June 7th, 2025
 thumbnail: https://static.frontendmasters.com/assets/courses/2023-12-12-vite/thumb.webp
 descr: Lorem Ipsum
-draft: true
 ---
 
 # I took the Vite FrontendMasters course by Steve Kinney and here are my takeaways

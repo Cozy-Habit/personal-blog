@@ -17,7 +17,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
     if (drawerRef && drawerRef.current) {
       drawerRef.current.checked = !drawerRef.current.checked;
     }
-    console.log(inputRef, inputRef.current);
     if (inputRef && inputRef.current) {
       inputRef.current.checked = !inputRef.current.checked;
     }
