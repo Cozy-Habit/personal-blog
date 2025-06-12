@@ -11,11 +11,9 @@ export default function getPostContent(id: string) {
     const transformed = fileContents.replace(
       /!\[(.*?)\]\(([^\)]+)\)/g,
       (_match, alt, imgPath) => {
-        console.log(_match, alt, imgPath);
         return `![${alt}](/_generated/posts/${id}/${imgPath})`;
       }
     );
-    console.log(id, transformed);
     return transformed;
   } catch (e) {
     console.error(e);

@@ -5,8 +5,14 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const postsDir = path.join(__dirname, "src", "posts");
-const publicPostsDir = path.join(__dirname, "public", "_generated", "posts");
+const postsDir = path.join(__dirname, "..", "src", "posts");
+const publicPostsDir = path.join(
+  __dirname,
+  "..",
+  "public",
+  "_generated",
+  "posts"
+);
 
 // Helper to delete a folder recursively
 function deleteFolderRecursive(dirPath) {
