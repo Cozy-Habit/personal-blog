@@ -24,9 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  NEXT_PUBLIC_BASE_PATH: "/personal-blog"
-
 jobs:
   # Build job
   build:
@@ -80,6 +77,8 @@ jobs:
         run: node ./scripts/copy-post-assets.mjs
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_PUBLIC_BASE_PATH: "/personal-blog"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
