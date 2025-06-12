@@ -28,19 +28,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <NavbarItem className="btn btn-ghost text-xl">
-              <Link
-                href={
-                  process.env.NODE_ENV === "production" ? "/personal-blog" : "/"
-                }
-              >
-                Blog
-              </Link>
+              <Link href="/">Blog</Link>
             </NavbarItem>
             <NavbarItem className="btn btn-ghost text-xl">
               <Link href="/timeline">Timeline</Link>
             </NavbarItem>
             <NavbarItem className="btn btn-ghost text-xl">
-              <Link href="/">Portfolio</Link>
+              <Link href="https://cozy-habit.github.io/">Portfolio</Link>
             </NavbarItem>
           </div>
           {/* <NavbarItem>
