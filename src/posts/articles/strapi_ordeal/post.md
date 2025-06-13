@@ -1,8 +1,8 @@
 ---
 title: Strapi Ordeal - How I spent 4 hours with no result but lots of knowledge
 date: June 7th, 2025
+descr: Lorem Ipsum
 thumbnail: https://yt3.googleusercontent.com/frBWP24Yx3w3EVtQgB7-Z3KI46w272tn3ZCBbpHfaQutVnMHe49-fLutBRUgfP3hO9iQQYokkg=s900-c-k-c0x00ffffff-no-rj
-draft: true
 ---
 
 # Strapi Ordeal

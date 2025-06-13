@@ -30,7 +30,7 @@ const Hero = () => {
       <p>
         Current focus:
         <br />
-        🤓FrontendMentor challenges
+        🤓 FrontendMentor challenges
         <br />
         👩🏼‍💻 Revamping my portfolio
         <br />

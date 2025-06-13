@@ -4,8 +4,9 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const articlesDir = path.join(__dirname, "..", "src", "posts", "articles");
+const projectsDir = path.join(__dirname, "..", "src", "posts", "projects");
 
-const postsDir = path.join(__dirname, "..", "src", "posts");
 const publicPostsDir = path.join(
   __dirname,
   "..",
@@ -30,18 +31,19 @@ function deleteFolderRecursive(dirPath) {
 }
 
 // Copy post assets
-function copyAssets() {
-  // Clean up old public/posts folder
-  if (fs.existsSync(publicPostsDir)) {
-    deleteFolderRecursive(publicPostsDir);
+function copyAssets(folderPath, publicFolderPath, subfolder) {
+  const publicSubfolderPath = path.join(publicFolderPath, subfolder);
+
+  if (fs.existsSync(publicSubfolderPath)) {
+    deleteFolderRecursive(publicSubfolderPath);
+    console.log(`✅ Cleaned assets for path ${publicSubfolderPath}`);
   }
-  fs.mkdirSync(publicPostsDir, { recursive: true });
 
-  const postFolders = fs.readdirSync(postsDir);
+  const folders = fs.readdirSync(folderPath);
 
-  postFolders.forEach((postFolder) => {
-    const assetSource = path.join(postsDir, postFolder, "assets");
-    const assetDest = path.join(publicPostsDir, postFolder);
+  folders.forEach((folder) => {
+    const assetSource = path.join(folderPath, folder, "assets");
+    const assetDest = path.join(publicSubfolderPath, folder);
 
     if (fs.existsSync(assetSource)) {
       fs.mkdirSync(assetDest, { recursive: true });
@@ -55,7 +57,10 @@ function copyAssets() {
     }
   });
 
-  console.log("✅ Cleaned and copied post assets");
+  console.log(
+    `✅ Copied post assets for path ${folderPath} into ${publicSubfolderPath}`
+  );
 }
 
-copyAssets();
+copyAssets(articlesDir, publicPostsDir, "articles");
+copyAssets(projectsDir, publicPostsDir, "projects");
