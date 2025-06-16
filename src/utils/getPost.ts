@@ -17,7 +17,7 @@ function getArticleContent(id: string) {
     const transformed = fileContents.replace(
       /!\[(.*?)\]\(([^\)]+)\)/g,
       (_match, alt, imgPath) => {
-        return `![${alt}](${basePath}/_generated/posts/projects/${id}/${imgPath})`;
+        return `![${alt}](${basePath}/_generated/posts/articles/${id}/${imgPath})`;
       }
     );
     return transformed;
@@ -35,7 +35,7 @@ function getProjectContent(id: string) {
     const transformed = fileContents.replace(
       /!\[(.*?)\]\(([^\)]+)\)/g,
       (_match, alt, imgPath) => {
-        return `![${alt}](${basePath}/_generated/posts/articles/${id}/${imgPath})`;
+        return `![${alt}](${basePath}/_generated/posts/projects/${id}/${imgPath})`;
       }
     );
     return transformed;

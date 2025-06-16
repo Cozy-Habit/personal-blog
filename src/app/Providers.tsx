@@ -50,11 +50,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
                 <Link href="/timeline">Timeline</Link>
               </NavbarItem>
             </div>
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <NavbarItem className="btn btn-ghost text-xl">
                 <Link href="https://cozy-habit.github.io/">Portfolio</Link>
               </NavbarItem>
-            </div>
+            </div> */}
           </div>
           <NavbarItem className="sm:hidden">
             <label
@@ -118,13 +118,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
             >
               Timeline
             </Link>
-            <Link
+            {/* <Link
               href="https://cozy-habit.github.io/"
               onClick={handleDrawerToggle}
               className="btn btn-ghost text-xl"
             >
               Portfolio
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </div>
